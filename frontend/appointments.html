@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Clinica Veterinaria</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item" id="registerLink"><a class="nav-link" href="register.html">Registrarse</a></li>
+                <li class="nav-item" id="loginLink"><a class="nav-link" href="login.html">Iniciar Sesión</a></li>
+                <li class="nav-item"><a class="nav-link" href="appointments.html">Gestionar Citas</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown" id="userContainer" style="display: none;">
+                    <a href="#" class="nav-link dropdown-toggle" id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu dropdown-menu-right" id="dropdownMenu">
+                        <a href="#" class="dropdown-item" id="logout">Cerrar sesión</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Citas</h1>
+        
+        <form id="appointmentForm" class="mb-4">
+            <div class="form-group">
+                <label for="date">Fecha:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Hora:</label>
+                <input type="time" class="form-control" id="time" required>
+            </div>
+            <div class="form-group">
+                <label for="petName">Nombre de la Mascota:</label>
+                <input type="text" class="form-control" id="petName" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Cita</button>
+        </form>
+
+        <h2>Lista de Citas</h2>
+        <ul id="appointmentsList" class="list-group"></ul>
+    </div>
+    <script src="appointments.js"></script>
+    <script src="session.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
